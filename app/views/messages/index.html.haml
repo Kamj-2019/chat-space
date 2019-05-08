@@ -1,0 +1,44 @@
+.wrapper__main__head
+  .wrapper__main__head__title
+    %h1 ATestGroup-1
+    %p Member：aaaaaaaa
+  .wrapper__main__head__button
+    %a{href: ""} Edit
+.wrapper__main__cont
+  %section
+    %article
+      .subheading
+        %h1 aaaaaaaa
+        %p 2019/05/04(Sat) 15:39:27
+      %p.message texttexttexttexttext
+      .subheading
+        %h1 aaaaaaaa
+        %p 2019/05/04(Sat) 15:39:27
+      %p.message texttexttexttexttext
+      .subheading
+        %h1 aaaaaaaa
+        %p 2019/05/04(Sat) 15:39:27
+      %p.message texttexttexttexttext
+      .subheading
+        %h1 aaaaaaaa
+        %p 2019/05/04(Sat) 15:39:27
+      %p.message texttexttexttexttext
+      .subheading
+        %h1 aaaaaaaa
+        %p 2019/05/04(Sat) 15:39:27
+      %p.message texttexttexttexttext
+      .subheading
+        %h1 aaaaaaaa
+        %p 2019/05/04(Sat) 15:39:27
+      %p.message texttexttexttexttext
+.wrapper__main__foot
+  %form{action: "", method: "post"}
+    .form_input
+      .form_text
+        %input{type: "text", placeholder: "type a message"}
+      .form_file
+        %label.upload-label{for: "upload-icon"}
+          %i.fa.fa-picture-o
+          /= f.file_field :image, id: "upload-icon"
+    .form_button
+      %input{type: "submit"}
