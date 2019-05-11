@@ -75,7 +75,7 @@ body {
     height: 100%;
     background-color: rgb(131, 73, 73);
   }
-  .wrapper__main__head {
+  &__main__head {
     width: calc(100vw - 300px);
     height: 100px;
     position: fixed;
@@ -112,7 +112,7 @@ body {
       }
     }
   }
-  .wrapper__main__cont {
+  &__main__cont {
     width: calc(100vw - 300px);
     height: calc(100% - 200px);
     padding: 46px 40px 0 40px;
@@ -147,7 +147,7 @@ body {
       }
     }
   }
-  .wrapper__main__foot {
+  &__main__foot {
     width: calc(100vw - 300px);
     height: 100px;
     padding: 25px $wrapperMainMargin;
