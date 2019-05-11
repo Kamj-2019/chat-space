@@ -32,13 +32,13 @@
         %p 2019/05/04(Sat) 15:39:27
       %p.message texttexttexttexttext
 .wrapper__main__foot
-  %form{action: "", method: "post"}
+  %form
     .form_input
       .form_text
         %input{type: "text", placeholder: "type a message"}
       .form_file
         %label.upload-label{for: "upload-icon"}
           %i.fa.fa-picture-o
-          /= f.file_field :image, id: "upload-icon"
+          %input{type: "file", id: "upload-icon", style: "display:none;"}
     .form_button
-      %input{type: "submit"}
+      %input{type: "submit",value: "Send"}
