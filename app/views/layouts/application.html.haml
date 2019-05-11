@@ -1,52 +1,10 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}
     %title ChatSpace
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .breakingnews
-      %p ログインしました
-    .wrapper
-      .wrapper__side
-        .wrapper__side__head
-          %h1 aaaaaaaa
-          %ul
-            %li
-              %a{href: ""}<
-                %i.fa.fa-pencil-square-o
-            %li
-              %a{href: ""}<
-                %i.fa.fa-cog
-        .wrapper__side__cont
-          .wrapper__side__cont__inner
-            %p.group グループ名
-            %p.message 投稿タイトル
-            %p.group グループ名
-            %p.message 投稿タイトル
-            %p.group グループ名
-            %p.message 投稿タイトル
-            %p.group グループ名
-            %p.message 投稿タイトル
-            %p.group グループ名
-            %p.message 投稿タイトル
-            %p.group グループ名
-            %p.message 投稿タイトル
-            %p.group グループ名
-            %p.message 投稿タイトル
-            %p.group グループ名
-            %p.message 投稿タイトル
-            %p.group グループ名
-            %p.message 投稿タイトル
-            %p.group グループ名
-            %p.message 投稿タイトル
-            %p.group グループ名
-            %p.message 投稿タイトル
-            %p.group グループ名
-            %p.message 投稿タイトル
-            %p.group グループ名
-            %p.message 投稿タイトル
-      .wrapper__main
-        = yield
+  = yield
