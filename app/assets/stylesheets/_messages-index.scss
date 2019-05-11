@@ -1,15 +1,14 @@
-
 .wrapper__main__head {
   width: calc(100vw - 300px);
   height: 100px;
   position: fixed;
   display: flex;
   border-bottom: 1px solid #eee;
-  background-color: #fff;
-  .wrapper__main__head__title {
+  background-color: $CharacterPlain-color;
+  &__title {
     width: 100%;
     height: 100px;
-    margin-left: 40px;
+    margin-left: $wrapperMainMargin;
     h1 {
       margin: 35px 0 15px 0;
       font-size:20px;
@@ -22,17 +21,17 @@
       overflow-wrap:break-word; 
     }
   }
-  .wrapper__main__head__button {
+  &__button {
     height: 100px;
-    margin: 0 40px 0 auto;
+    margin: 0 $wrapperMainMargin 0 auto;
     a {
       display: block;
       height: 40px;
       line-height: 40px;
       padding: 0 20px;
       margin-top:28px;
-      color: #38aef0;
-      border: 1px solid #38aef0;
+      color: $MainBlue-color;
+      border: 1px solid $MainBlue-color;
     }
   }
 }
@@ -74,7 +73,7 @@
 .wrapper__main__foot {
   width: calc(100vw - 300px);
   height: 100px;
-  padding: 25px 40px;
+  padding: 25px $wrapperMainMargin;
   position: fixed;
   bottom: 0;
   background-color: #afafaf;
@@ -107,10 +106,10 @@
         width: 100px;
         height: 50px;
         line-height: 50px;
-        color: #fff;
+        color: $CharacterPlain-color;
         text-align: center;
         cursor: pointer;
-        background-color: #38aef0;
+        background-color: $MainBlue-color;
       }
     }
   }
