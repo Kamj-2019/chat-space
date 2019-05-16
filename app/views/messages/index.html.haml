@@ -1,16 +1,17 @@
-.breakingnews
-  %p ログインしました
+/.breakingnews
+/  %p ログインしました
 .wrapper
   .wrapper__side
     .wrapper__side__head
-      %h1 aaaaaaaa
+      %h1
+        = current_user.name
       %ul
         %li
-          %a{href: ""}<
-            %i.fa.fa-pencil-square-o
+          = link_to do
+            = fa_icon 'pencil-square-o'
         %li
-          %a{href: ""}<
-            %i.fa.fa-cog
+          = link_to edit_user_path(current_user) do
+            = fa_icon 'cog'
     .wrapper__side__cont
       .wrapper__side__cont__inner
         %p.group グループ名
