@@ -1,45 +1,7 @@
 /.breakingnews
 /  %p ログインしました
 .wrapper
-  .wrapper__side
-    .wrapper__side__head
-      %h1
-        = current_user.name
-      %ul
-        %li
-          = link_to new_group_path do
-            = fa_icon 'pencil-square-o'
-        %li
-          = link_to edit_user_path(current_user) do
-            = fa_icon 'cog'
-    .wrapper__side__cont
-      .wrapper__side__cont__inner
-        %p.group グループ名
-        %p.message 投稿タイトル
-        %p.group グループ名
-        %p.message 投稿タイトル
-        %p.group グループ名
-        %p.message 投稿タイトル
-        %p.group グループ名
-        %p.message 投稿タイトル
-        %p.group グループ名
-        %p.message 投稿タイトル
-        %p.group グループ名
-        %p.message 投稿タイトル
-        %p.group グループ名
-        %p.message 投稿タイトル
-        %p.group グループ名
-        %p.message 投稿タイトル
-        %p.group グループ名
-        %p.message 投稿タイトル
-        %p.group グループ名
-        %p.message 投稿タイトル
-        %p.group グループ名
-        %p.message 投稿タイトル
-        %p.group グループ名
-        %p.message 投稿タイトル
-        %p.group グループ名
-        %p.message 投稿タイトル
+  = render "shared/side_bar" 
   .wrapper__main
     .wrapper__main__head
       .wrapper__main__head__title
@@ -48,32 +10,7 @@
       .wrapper__main__head__button
         %a{href: ""} Edit
     .wrapper__main__cont
-      %section
-        %article
-          .subheading
-            %h1 aaaaaaaa
-            %p 2019/05/04(Sat) 15:39:27
-          %p.message texttexttexttexttext
-          .subheading
-            %h1 aaaaaaaa
-            %p 2019/05/04(Sat) 15:39:27
-          %p.message texttexttexttexttext
-          .subheading
-            %h1 aaaaaaaa
-            %p 2019/05/04(Sat) 15:39:27
-          %p.message texttexttexttexttext
-          .subheading
-            %h1 aaaaaaaa
-            %p 2019/05/04(Sat) 15:39:27
-          %p.message texttexttexttexttext
-          .subheading
-            %h1 aaaaaaaa
-            %p 2019/05/04(Sat) 15:39:27
-          %p.message texttexttexttexttext
-          .subheading
-            %h1 aaaaaaaa
-            %p 2019/05/04(Sat) 15:39:27
-          %p.message texttexttexttexttext
+      = render "messages/chat"
     .wrapper__main__foot
       %form
         .form_input
