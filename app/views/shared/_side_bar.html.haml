@@ -11,29 +11,7 @@
           = fa_icon 'cog'
   .wrapper__side__cont
     .wrapper__side__cont__inner
-      %p.group グループ名
-      %p.message 投稿タイトル
-      %p.group グループ名
-      %p.message 投稿タイトル
-      %p.group グループ名
-      %p.message 投稿タイトル
-      %p.group グループ名
-      %p.message 投稿タイトル
-      %p.group グループ名
-      %p.message 投稿タイトル
-      %p.group グループ名
-      %p.message 投稿タイトル
-      %p.group グループ名
-      %p.message 投稿タイトル
-      %p.group グループ名
-      %p.message 投稿タイトル
-      %p.group グループ名
-      %p.message 投稿タイトル
-      %p.group グループ名
-      %p.message 投稿タイトル
-      %p.group グループ名
-      %p.message 投稿タイトル
-      %p.group グループ名
-      %p.message 投稿タイトル
-      %p.group グループ名
-      %p.message 投稿タイトル
+      - current_user.groups.each do |group|
+        = link_to group_messages_path(group) do
+          %p.group = group.name
+          %p.message メッセージはまだありません
