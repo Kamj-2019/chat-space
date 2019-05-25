@@ -1,21 +1,31 @@
 class MessagesController < ApplicationController
+  before_action :set_group
 
   def index
-    @message = Message.find(params[:group_id])
+    @message = Message.new
+    @messages = @group.messages.includes(:user)
+    #特定のgroup_idのmessageを全部引っ張ってくる。n+1回避の為includes使う
   end
 
   def create
-    @message = Message.new(message_params)
+    @message = @group.messages.new(message_params)
+    #binding.pry
     if @message.save
-      redirect_to group_messages_path
+      redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
     else
-      render :index, notice: 'メッセージを入力してください'
+      @messages = @group.messages.includes(:user)
+      flash.now[:alert] = 'メッセージを入力してください'
+      render :index
     end
   end
 
   private
 
   def message_params
-    params.permit(:content, :image, :group_id, :user_id)
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
+  end
+
+  def set_group
+    @group = Group.find(params[:group_id])
   end
 end
