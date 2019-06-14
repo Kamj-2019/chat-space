@@ -35,7 +35,7 @@
     margin-top: 100px;
     padding: 20px 0 0 0;
     background-color: #2f3e51;
-    overflow: scroll;
+    overflow: auto;
     &__inner {
       width: 260px;
       margin: 0 auto;
@@ -51,6 +51,7 @@
         p.message {
           font-size: 11px;
           margin-bottom:40px;
+          color: $CharacterPlain-color;
         }
       }
     }
