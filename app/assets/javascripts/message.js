@@ -26,9 +26,9 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.wrapper__main__cont').append(html);
-      $('#message_content').val('');
       $('input').prop('disabled', false);
       $('.wrapper__main__cont').animate({scrollTop: $('.wrapper__main__cont')[0].scrollHeight}, 'fast');
+      $('form')[0].reset();
     })
     .fail(function(data){
       alert('エラーが発生しました');
