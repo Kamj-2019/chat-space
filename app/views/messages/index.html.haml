@@ -9,7 +9,8 @@
           Member：
           = current_user.name
       .wrapper__main__head__button
-        %a{href: ""} Edit
+        = link_to edit_group_path(@group.id) do
+          Edit
     .wrapper__main__cont
       = render @messages
     .wrapper__main__foot
