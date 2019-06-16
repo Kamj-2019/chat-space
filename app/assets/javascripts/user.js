@@ -5,14 +5,14 @@ $(function(){
                   <p class="chat-group-user__name">${ user.name }</p>
                   <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" id="user_info" user-id="${ user.id }" user-name="${ user.name }">追加</div>
                 </div>`;
-    user_list.append(html);            
+    user_list.append(html);
   }
 
   function appendErrMsg(msg) {
     var html = `<div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">${ msg }</p>
                 </div>`;
-    user_list.append(html);                   
+    user_list.append(html);
   }
 
   var group_users = $("#chat-group-users");
