@@ -56,9 +56,9 @@ $(function(){
         $('.wrapper__main__cont').animate({scrollTop: $('.wrapper__main__cont')[0].scrollHeight}, 'fast');
       });
     })
-    .fail(function() {
-      console.log('error');
-    });
+    .fail(function(data){
+      alert('エラーが発生しました');
+    })
   };
   setInterval(reloadMessages, 5000);
 });
