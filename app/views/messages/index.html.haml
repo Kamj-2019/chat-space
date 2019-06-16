@@ -11,7 +11,7 @@
       .wrapper__main__head__button
         = link_to edit_group_path(@group.id) do
           Edit
-    .wrapper__main__cont{data: {'group-id': "#{@group.id}"}}
+    .wrapper__main__cont
       = render @messages
     .wrapper__main__foot
       = form_for [@group, @message], html: { multipart: true } do |f|
