@@ -3,9 +3,19 @@ $(function(){
 
     var addImage = message.image? `<img class="lower-message__image" src=${message.image}>` : "";
 
+    var timezoneoffset = -9     // UTC-表示したいタイムゾーン(単位:hour)。JSTなら-9
+    var fakeUTC = new Date(message.date);
+    // fakeUTCに対して、getFullYear(), getMonth(), getDate(), getHours(), getMinutes(),getSeconds()を使えば、timezoneoffsetで指定したタイムゾーンで時刻取得ができる。以下は利用例。
+    var year = fakeUTC.getFullYear();
+    var month = fakeUTC.getMonth();
+    var date = fakeUTC.getDate();
+    var hour = fakeUTC.getHours()+9;
+    var min = fakeUTC.getMinutes();
+    var second = fakeUTC.getSeconds();
+
     var html = `<div class='subheading' data-message-id=${message.message_id}>
     <h1>${ message.name }</h1>
-    <p>${ message.date }</p>
+    <p>${year}/${month}/${date} ${hour}:${min}</p>
     </div>
     <p class='message'>${ message.content }</p>
     ${addImage}`;
